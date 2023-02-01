@@ -1,3 +1,40 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-typescript",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-var": 2,
+    "semi": [2, "always"],
+    "quotes": [2, "double", { "allowTemplateLiterals": true }],
+    "@typescript-eslint/ban-ts-comment": 0,
+    "no-shadow": 0,
+    "@typescript-eslint/no-shadow": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    // most of the images used from /public instead of  using Next/image
+    "@next/next/no-img-element": 0,
+    // some names in the app get from API
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "modifiers": ["destructured"],
+        "format": null
+      }
+    ],
+    // app need to throw an error in catch to show an error from API to UI
+    "no-throw-literal": 0,
+    "@typescript-eslint/no-throw-literal": [0],
+
+    // this rule didn't fit with the Redux Toolkit
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": [0]
+  }
 }
