@@ -30,6 +30,7 @@ module.exports = withBundleAnalyzer({
   },
   experimental: {
     scrollRestoration: true,
+    appDir: true,
   },
   reactStrictMode: true,
   trailingSlash: true,

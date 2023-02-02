@@ -1,0 +1,96 @@
+.container {
+  width: 250px;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  background-color: $bg-secondary;
+  z-index: $z-index-x;
+  @include flex-column-space();
+  @include tablet {
+    transition: ease all 0.35s;
+    z-index: $z-index-x;
+    left: -333px;
+  }
+  &.show {
+    left: 0;
+  }
+}
+.logo {
+  padding: 65px 25px 25px;
+  position: relative;
+  text-align: center;
+  @include flex-column-center();
+  .icon {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #fff;
+  }
+  .name {
+    margin-top: 15px;
+    @include fz(13);
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: $white;
+  }
+  &::after {
+    content: "";
+    width: 310px;
+    height: 310px;
+    position: absolute;
+    top: -180px;
+    left: -50px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    background: $bg-green;
+  }
+}
+
+.menu {
+  padding: 45px 0;
+  li:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+  }
+  .item {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    @include fz(12);
+    text-transform: uppercase;
+    line-height: 18px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.8);
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+    .text {
+      margin-left: 10px;
+    }
+    &.active {
+      color: $bg-green;
+      font-weight: 600;
+    }
+  }
+  .item:hover {
+    color: rgb(47, 191, 113, 0.8);
+  }
+}
+
+.navTop {
+  width: 100%;
+}
+
+.navBottom {
+  padding: 12px 0;
+  width: 100%;
+  @include flex-center();
+  i {
+    font-size: 14px;
+    color: $white;
+    margin-right: 20px;
+  }
+}
