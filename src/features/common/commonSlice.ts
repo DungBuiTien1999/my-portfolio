@@ -4,23 +4,28 @@ import { RootState } from "@src/app/store";
 
 interface CommonState {
   isShowNav: boolean;
+  isLightMode: boolean;
 }
 
 const initialState: CommonState = {
   isShowNav: false,
+  isLightMode: true,
 };
 
 export const commonSlice = createSlice({
-  name: "counter",
+  name: "common",
   initialState,
   reducers: {
     setShowNav: (state, action: PayloadAction<boolean>) => {
       state.isShowNav = action.payload;
     },
+    changeDarkMode: (state) => {
+      state.isLightMode = !state.isLightMode;
+    },
   },
 });
 
-export const { setShowNav } = commonSlice.actions;
+export const { setShowNav, changeDarkMode } = commonSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const commonState = (state: RootState) => state.common;

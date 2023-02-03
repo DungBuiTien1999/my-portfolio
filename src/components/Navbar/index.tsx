@@ -5,8 +5,7 @@ import Link from "next/link";
 import { MenuItem } from "@src/types/common";
 import cn from "classnames";
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "@src/app/store";
+import { useAppSelector } from "@src/app/hooks";
 
 const menu: MenuItem[] = [
   {
@@ -44,7 +43,7 @@ const menu: MenuItem[] = [
 export const Navbar: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [active, _] = useState("#about");
-  const { isShowNav } = useSelector((state: RootState) => state.common);
+  const { isShowNav } = useAppSelector((state) => state.common);
   return (
     <nav className={cn(styles.container, { [styles.show]: isShowNav })}>
       <div className={styles.navTop}>
@@ -105,7 +104,7 @@ export const Navbar: React.FC = () => {
         >
           <i className="fa-brands fa-linkedin-in"></i>
         </Link>
-        <Link href="" target="_blank">
+        <Link href="https://github.com/DungBuiTien1999" target="_blank">
           <i className="fa-brands fa-github"></i>
         </Link>
       </div>

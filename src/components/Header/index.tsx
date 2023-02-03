@@ -11,14 +11,16 @@ export const Header: React.FC = () => {
     dispatch(setShowNav(!isShowNav));
   };
   return (
-    <header className={styles.container}>
-      <Link className={styles.logo} href="/">
-        GBTDUN
-      </Link>
-      <div onClick={handleClick} className={styles.togglerMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+    <header className={styles.headerTop}>
+      <div className={styles.container}>
+        <Link className={styles.logo} href="/">
+          GBTDUN
+        </Link>
+        <div onClick={handleClick} className={styles.togglerMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
   );

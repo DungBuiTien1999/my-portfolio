@@ -2,6 +2,19 @@
   margin: 0 auto;
   overflow: hidden;
   min-height: calc(var(--vh, 1vh) * 100);
-  background-color: $bg-primary;
   position: relative;
+}
+
+.content {
+  padding-left: 260px;
+  width: 100%;
+  overflow: auto;
+  background-color: $bg-primary;
+  transition: ease all 0.35s;
+  @include tablet {
+    padding: 0;
+  }
+  &.lightMode {
+    background-color: $white;
+  }
 }
