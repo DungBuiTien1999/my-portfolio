@@ -3,7 +3,7 @@ import { changeDarkMode } from "@src/features/common/commonSlice";
 import styles from "./styles.module.scss";
 import cn from "classnames";
 
-export const Switchbackground = () => {
+export const Switchbackground: React.FC = () => {
   const dispatch = useAppDispatch();
   const { isLightMode } = useAppSelector((state) => state.common);
   const handleClick = () => {

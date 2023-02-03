@@ -9,7 +9,7 @@ interface CommonState {
 
 const initialState: CommonState = {
   isShowNav: false,
-  isLightMode: true,
+  isLightMode: false,
 };
 
 export const commonSlice = createSlice({
