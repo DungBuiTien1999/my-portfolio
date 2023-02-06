@@ -4,11 +4,12 @@ import { exLoader } from "@src/common/utils";
 import { useAppSelector } from "@src/app/hooks";
 import cn from "classnames";
 import { TypingAnimation } from "@src/components/TypingAnimation";
+import { BtnBar } from "@src/components/Button/BtnBar";
 
 export const HomeSection: React.FC = () => {
   const { isLightMode } = useAppSelector((state) => state.common);
   return (
-    <div className={isLightMode ? styles.decorLight : styles.decor}>
+    <div id="home" className={isLightMode ? styles.decorLight : styles.decor}>
       <section
         className={cn(styles.container, { [styles.lightMode]: isLightMode })}
       >
@@ -21,7 +22,7 @@ export const HomeSection: React.FC = () => {
               1000,
               "Passionate Web Development",
               1000,
-              "Passionate Reactjs",
+              "Passionate ReactJS",
               1000,
             ]}
             prefixText="I Am "
@@ -32,11 +33,7 @@ export const HomeSection: React.FC = () => {
             specializing in creating stylish, modern websites, web services and
             online stores.
           </p>
-          <div
-            className={cn(styles.btnBar, { [styles.lightMode]: isLightMode })}
-          >
-            <a href="#">Download CV</a>
-          </div>
+          <BtnBar text="Download CV" handleClick={() => {}} />
         </div>
         <div className={styles.hero}>
           <Image

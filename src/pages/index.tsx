@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@src/styles/home/home.module.scss";
 import { HomeSection } from "@src/containers/Home";
+import { AboutSection } from "@src/containers/About";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <HomeSection />
+        <AboutSection />
       </div>
     </>
   );

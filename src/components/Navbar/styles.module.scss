@@ -5,6 +5,8 @@
   top: 0;
   background-color: $bg-secondary;
   z-index: $z-index-x;
+  overflow-y: auto;
+  overflow-x: hidden;
   @include flex-column-space();
   @include tablet {
     transition: ease all 0.35s;

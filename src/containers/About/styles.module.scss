@@ -1,0 +1,251 @@
+.container {
+  width: 100%;
+  margin-top: 200px;
+}
+
+.aboutWrapper {
+  @include flex-space();
+  gap: 30px;
+  color: $white;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  padding-bottom: 80px;
+  &.lightMode {
+    color: $text-1;
+  }
+  @include tablet {
+    @include flex-column-center();
+    padding-bottom: 0px;
+  }
+}
+
+.gallery {
+  width: 100%;
+  max-width: 560px;
+  background-color: $text-1;
+  border-radius: 20px;
+  &.lightMode {
+    background-color: $bg-gray;
+  }
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.aboutMe {
+  margin-top: 15px;
+  max-width: 560px;
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.aboutText {
+  h3 {
+    margin-bottom: 25px;
+    @include fz(28);
+    font-weight: 500;
+    line-height: 34px;
+  }
+  .desc {
+    margin-bottom: 16px;
+    @include fz(15);
+    line-height: 25px;
+    &.lightMode {
+      color: $text-2;
+    }
+  }
+  .amountExs {
+    display: flex;
+    .Exps {
+      @include flex-center();
+      .amount {
+        @include fz(50);
+        font-weight: 600;
+        line-height: 1px;
+      }
+      .media {
+        @include fz(15);
+        line-height: 20px;
+        margin-left: 10px;
+        &.lightMode {
+          color: $text-2;
+        }
+      }
+    }
+    .Exps:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+  .interact {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+  }
+}
+
+.education {
+  width: 290px;
+  flex-shrink: 0;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.eduItem {
+  padding: 20px;
+  background-color: $text-1;
+  color: $white;
+  width: 100%;
+  &.lightMode {
+    background-color: $bg-gray;
+    color: $text-1;
+    span {
+      color: $white;
+    }
+    p {
+      color: $text-2;
+    }
+    &:not(:first-child) {
+      border-top: 1px solid rgba(11, 11, 19, 0.05);
+    }
+  }
+  &:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  span {
+    background: $bg-green;
+    @include fz(11);
+    padding: 1px 8px;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-left: -24px;
+    position: relative;
+    margin-bottom: 9px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      border-top: 5px solid #165934;
+      border-left: 5px solid transparent;
+    }
+  }
+  h6 {
+    @include fz(16);
+    font-weight: 500;
+    margin: 5px 0;
+  }
+  p {
+    @include fz(15);
+  }
+}
+
+.skills {
+  h3 {
+    @include fz(28);
+    line-height: 34px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  p {
+    @include fz(15);
+    line-height: 25px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+  }
+}
+
+.mt {
+  &25 {
+    margin-top: 25px;
+  }
+}
+
+.experiences {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    padding: 35px;
+    display: flex;
+    align-items: flex-start;
+    background-color: $text-1;
+    color: $white;
+    &:not(:first-child) {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    &.lightMode {
+      color: $text-1;
+      background-color: $bg-gray;
+      border-top: 1px solid rgba(11, 11, 19, 0.05);
+      .jobType {
+        color: $white;
+      }
+    }
+    @include sp {
+      flex-direction: column;
+    }
+    .logo {
+      margin: 0 15px;
+      width: 192px;
+      height: 192px;
+      flex-shrink: 0;
+      background-color: $white;
+      @include tablet {
+        width: 139px;
+        height: 139px;
+      }
+      @include smallTablet {
+        width: 100px;
+        height: 100px;
+      }
+      @include sp {
+        margin-bottom: 25px;
+      }
+    }
+    .content {
+      padding: 0 15px;
+      position: relative;
+      .title {
+        @include fz(25);
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
+      .group {
+        display: block;
+        @include fz(13);
+        line-height: 22px;
+        margin-bottom: 12px;
+        &.lightMode {
+          color: $text-2;
+        }
+        @include smallTablet {
+          margin-bottom: 6px;
+        }
+      }
+      .desc {
+        @include fz(15);
+        line-height: 25px;
+        &.lightMode {
+          color: $text-2;
+        }
+      }
+      .jobType {
+        padding: 5px 10px;
+        background: $bg-green;
+        @include fz(10);
+        line-height: 17px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include smallTablet {
+          position: relative;
+          margin-bottom: 14px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

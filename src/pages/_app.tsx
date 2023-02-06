@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from "@src/app/store";
 
 const rubik = Rubik({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 

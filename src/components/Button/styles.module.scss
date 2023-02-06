@@ -1,0 +1,34 @@
+.btnBar {
+  p {
+    padding: 0 25px;
+    line-height: 42px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid transparent;
+    @include fz(14);
+    font-weight: $regular;
+    letter-spacing: 2px;
+    transition: ease all 0.35s;
+    background: $bg-green;
+    color: $white;
+    box-shadow: 4px 4px $white;
+    cursor: pointer;
+    min-width: 150px;
+    text-align: center;
+    &:hover {
+      background-color: $white;
+      box-shadow: 4px 4px $bg-green;
+      color: $bg-green;
+    }
+  }
+  &.lightMode {
+    p {
+      box-shadow: 4px 4px $text-1;
+      &:hover {
+        background-color: $text-1;
+        box-shadow: 4px 4px $bg-green;
+        color: $white;
+      }
+    }
+  }
+}

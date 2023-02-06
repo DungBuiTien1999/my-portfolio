@@ -35,7 +35,7 @@
     width: 100vh;
     height: 100vh;
     border-radius: 50%;
-    background: #f7f7ff;
+    background: $bg-gray;
   }
 }
 
@@ -79,28 +79,5 @@
   border: 5px solid $bg-green;
   @include tablet {
     max-width: 540px;
-  }
-}
-
-.btnBar {
-  padding-top: 15px;
-  a {
-    padding: 0 25px;
-    line-height: 42px;
-    position: relative;
-    display: inline-block;
-    border: 1px solid transparent;
-    @include fz(14);
-    font-weight: $regular;
-    letter-spacing: 2px;
-    transition: ease all 0.35s;
-    background: $bg-green;
-    color: $white;
-    box-shadow: 4px 4px $white;
-  }
-  &.lightMode {
-    a {
-      box-shadow: 4px 4px $text-1;
-    }
   }
 }

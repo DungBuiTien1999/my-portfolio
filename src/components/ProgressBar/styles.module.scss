@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+}
+
+.title {
+  @include fz(14);
+  line-height: 17px;
+  margin-bottom: 10px;
+  font-weight: $regular;
+  color: $white;
+  &.lightMode {
+    color: $text-1;
+  }
+}
+
+.progressWrapper {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 5px;
+  &.lightMode {
+    background-color: rgba(11, 11, 19, 0.1);
+  }
+}
+
+.progress {
+  width: 50%;
+  position: relative;
+  transition: ease all 0.55s;
+  height: 5px;
+  background: $bg-green;
+  &::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: $bg-green;
+    position: absolute;
+    right: -1px;
+    top: -5px;
+  }
+}
