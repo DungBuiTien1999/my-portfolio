@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 -15px;
+  flex-wrap: wrap;
+  .item {
+    width: 50%;
+    padding: 0 15px 15px;
+    margin-top: 15px;
+  }
+  @include sp {
+    display: block;
+    .item {
+      width: 100%;
+    }
+  }
+}
+
+.feature {
+  padding: 20px;
+  background-color: $text-1;
+  color: $white;
+  display: flex;
+  align-items: flex-start;
+  transition: all ease 0.35s;
+  &:hover {
+    background-color: $bg-green;
+  }
+  &.lightMode {
+    background-color: $bg-gray;
+    color: $text-1;
+    .desc {
+      color: $text-2;
+    }
+    &:hover {
+      background-color: $bg-green;
+      color: $white;
+      .desc {
+        color: $white;
+      }
+    }
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .content {
+    padding-left: 15px;
+  }
+  .title {
+    @include fz(20);
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .desc {
+    @include fz(15);
+    line-height: 25px;
+  }
+}
+
+.pt {
+  &100 {
+    padding-top: 100px;
+  }
+}
+
+.testimonial {
+  padding: 35px;
+  background-color: $text-1;
+  color: $white;
+  display: flex;
+  align-items: flex-start;
+  transition: all ease 0.35s;
+  &.lightMode {
+    color: $text-1;
+    background-color: $bg-gray;
+    .desc,
+    .position {
+      color: $text-2;
+    }
+  }
+  .avartar {
+    width: 100px;
+    flex-shrink: 0;
+    @include sp {
+      width: 50px;
+    }
+  }
+  .content {
+    padding-left: 25px;
+    .desc {
+      @include fz(15);
+      line-height: 25px;
+      margin-bottom: 16px;
+    }
+    .name {
+      @include fz(16);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .position {
+      @include fz(13);
+    }
+  }
+}

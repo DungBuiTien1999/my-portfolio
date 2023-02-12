@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@src/styles/home/home.module.scss";
 import { HomeSection } from "@src/containers/Home";
 import { AboutSection } from "@src/containers/About";
+import { Services } from "@src/containers/Services";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <div className={styles.container}>
         <HomeSection />
         <AboutSection />
+        <Services />
       </div>
     </>
   );

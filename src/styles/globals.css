@@ -35,3 +35,33 @@ button {
   color: inherit;
   background: none;
 }
+
+.swiper-container {
+  width: 100%;
+}
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
+}
+
+.swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+}
+
+.swiper-pagination-bullet {
+  background: transparent !important;
+  border: 1px solid #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff !important;
+}
+
+.lightMode .swiper-pagination-bullet {
+  border-color: #0b0b13 !important;
+}

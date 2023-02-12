@@ -3,10 +3,7 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -20,12 +17,8 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@src/*": [
-        "./src/*"
-      ],
-      "@styles/*": [
-        "./src/styles/*"
-      ]
+      "@src/*": ["./src/*"],
+      "@styles/*": ["./src/styles/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
@@ -38,13 +31,6 @@
       }
     ]
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
 }
