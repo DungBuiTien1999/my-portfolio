@@ -1,20 +1,35 @@
 import styles from "./styles.module.scss";
 import Image, { ImageLoader } from "next/image";
 import { exLoader } from "@src/common/utils";
-import { useAppSelector } from "@src/app/hooks";
+import {
+  useAppDispatch,
+  useAppSelector,
+  useIntersectionObserver,
+} from "@src/app/hooks";
 import cn from "classnames";
 import { TypingAnimation } from "@src/components/TypingAnimation";
 import { BtnBar } from "@src/components/Button/BtnBar";
+import { useEffect, useRef } from "react";
+import { setActiveSection } from "@src/features/common/commonSlice";
 
 export const HomeSection: React.FC = () => {
+  const ref = useRef<HTMLHeadingElement | null>(null);
   const { isLightMode } = useAppSelector((state) => state.common);
+  const dispatch = useAppDispatch();
+  const entry = useIntersectionObserver(ref, {});
+  const isVisible = !!entry?.isIntersecting;
+  useEffect(() => {
+    if (isVisible) dispatch(setActiveSection("#home"));
+  });
   return (
-    <div id="home" className={isLightMode ? styles.decorLight : styles.decor}>
+    <div className={isLightMode ? styles.decorLight : styles.decor}>
       <section
         className={cn(styles.container, { [styles.lightMode]: isLightMode })}
       >
         <div className={styles.textBox}>
-          <h6>Hello, I am</h6>
+          <h6 ref={ref} id="home">
+            Hello, I am
+          </h6>
           <h1>Tien Dung</h1>
           <TypingAnimation
             sequences={[

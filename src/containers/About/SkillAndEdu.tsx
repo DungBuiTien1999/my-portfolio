@@ -68,7 +68,9 @@ export const SkillAndEdu: React.FC = () => {
   return (
     <Section titleText="education & skill" hasBorder>
       <div
-        className={cn(styles.aboutWrapper, { [styles.lightMode]: isLightMode })}
+        className={cn(styles.aboutWrapper, styles.notBorder, {
+          [styles.lightMode]: isLightMode,
+        })}
       >
         <div className={styles.education}>
           {educations.map((edu, idx) => (

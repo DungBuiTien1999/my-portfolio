@@ -59,7 +59,13 @@ const Feature: React.FC<Props> = ({ icon, title, desc }) => {
 
 export const Features: React.FC = () => {
   return (
-    <Section hasBorder titleText="what i do?" className={styles.pt100}>
+    <Section
+      id="services"
+      isMainSection
+      hasBorder
+      titleText="what i do?"
+      className={styles.pt100}
+    >
       <div className={styles.wrapper}>
         {features.map((feature, idx) => (
           <div key={idx} className={styles.item}>

@@ -101,7 +101,7 @@ export const Testimonials: React.FC = () => {
     }
   }, []);
   return (
-    <Section hasBorder titleText="testimonials">
+    <Section titleText="testimonials">
       <Swiper
         className={cn("mySwiper", isLightMode ? "lightMode" : undefined)}
         spaceBetween={OPTION.spaceBetween}

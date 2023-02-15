@@ -4,7 +4,6 @@ import { exLoader } from "@src/common/utils";
 import Link from "next/link";
 import { MenuItem } from "@src/types/common";
 import cn from "classnames";
-import { useState } from "react";
 import { useAppSelector } from "@src/app/hooks";
 
 const menu: MenuItem[] = [
@@ -41,9 +40,25 @@ const menu: MenuItem[] = [
 ];
 
 export const Navbar: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [active, _] = useState("#about");
-  const { isShowNav } = useAppSelector((state) => state.common);
+  const { isShowNav, activeSection } = useAppSelector((state) => state.common);
+  const handleClick = (
+    e:
+      | React.MouseEvent<HTMLAnchorElement>
+      | React.TouchEvent<HTMLAnchorElement>,
+    linkToCheck: string
+  ) => {
+    e.preventDefault();
+    const id = linkToCheck.replace("#", "");
+    const element = document.getElementById(id);
+    if (element) {
+      const heightHeader =
+        typeof window !== undefined && window.innerWidth < 968 ? 70 : 0;
+      console.log(heightHeader);
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset - heightHeader;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
   return (
     <nav className={cn(styles.container, { [styles.show]: isShowNav })}>
       <div className={styles.navTop}>
@@ -65,7 +80,7 @@ export const Navbar: React.FC = () => {
             <li
               key={`${item.name}-${idx}`}
               className={cn(styles.item, {
-                [styles.active]: active === item.link,
+                [styles.active]: activeSection === item.link,
               })}
             >
               <div className={styles.icon}>
@@ -78,9 +93,13 @@ export const Navbar: React.FC = () => {
                   height={1}
                 />
               </div>
-              <Link className={styles.text} href={item.link}>
+              <a
+                onClick={(e) => handleClick(e, item.link)}
+                className={styles.text}
+                href={item.link}
+              >
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

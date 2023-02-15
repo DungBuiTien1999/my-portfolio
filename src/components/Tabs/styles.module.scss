@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  .tabsHeader {
+    width: 100%;
+    overflow: auto;
+    color: $white;
+    padding: 15px 0;
+    @include fz(13);
+    text-transform: uppercase;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    @include flex-space();
+    &.fixedTop {
+      position: fixed;
+      z-index: $z-index-second;
+    }
+    &.lightMode {
+      color: $text-1;
+    }
+  }
+  .tabItem {
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 15px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    &.active::after {
+      width: 100%;
+    }
+    &::after {
+      content: "";
+      width: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: 2px;
+      background: $bg-green;
+      position: absolute;
+      transition: ease all 0.55s;
+    }
+  }
+}

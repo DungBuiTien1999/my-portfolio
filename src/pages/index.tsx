@@ -3,6 +3,7 @@ import styles from "@src/styles/home/home.module.scss";
 import { HomeSection } from "@src/containers/Home";
 import { AboutSection } from "@src/containers/About";
 import { Services } from "@src/containers/Services";
+import { Portfolio } from "@src/containers/Portfolio";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HomeSection />
         <AboutSection />
         <Services />
+        <Portfolio />
       </div>
     </>
   );

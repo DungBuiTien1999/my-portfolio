@@ -1,0 +1,27 @@
+.pt {
+  &100 {
+    padding-top: 100px;
+  }
+}
+
+.gridWrapper {
+  column-count: 3;
+  column-gap: 24px;
+  @include smallTablet {
+    column-count: 2;
+  }
+  @include sp {
+    column-count: 1;
+  }
+}
+
+.gridItem {
+  break-inside: avoid;
+  margin: 24px 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
