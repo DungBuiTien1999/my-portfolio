@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Image, { ImageLoader } from "next/image";
-import { exLoader } from "@src/common/utils";
+import { exLoader, handleClickAnchorLink } from "@src/common/utils";
 import Link from "next/link";
 import { MenuItem } from "@src/types/common";
 import cn from "classnames";
@@ -48,16 +48,7 @@ export const Navbar: React.FC = () => {
     linkToCheck: string
   ) => {
     e.preventDefault();
-    const id = linkToCheck.replace("#", "");
-    const element = document.getElementById(id);
-    if (element) {
-      const heightHeader =
-        typeof window !== undefined && window.innerWidth < 968 ? 70 : 0;
-      console.log(heightHeader);
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset - heightHeader;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+    handleClickAnchorLink(linkToCheck);
   };
   return (
     <nav className={cn(styles.container, { [styles.show]: isShowNav })}>

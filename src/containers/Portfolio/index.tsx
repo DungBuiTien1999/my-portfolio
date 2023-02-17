@@ -89,7 +89,7 @@ export const Portfolio: React.FC = () => {
       <Section
         id="portfolio"
         isMainSection
-        titleText="portfolio"
+        titleText="portfolio."
         className={styles.pt100}
       >
         <Tabs tabs={tabs} active={activeTab}>

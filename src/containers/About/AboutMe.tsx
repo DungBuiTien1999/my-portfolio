@@ -5,7 +5,7 @@ import { Section } from "@src/components/Section";
 import styles from "./styles.module.scss";
 import cn from "classnames";
 import Image, { ImageLoader } from "next/image";
-import { exLoader } from "@src/common/utils";
+import { exLoader, handleClickAnchorLink } from "@src/common/utils";
 
 export const AboutMe: React.FC = () => {
   const { isLightMode } = useAppSelector((state) => state.common);
@@ -23,7 +23,7 @@ export const AboutMe: React.FC = () => {
           height={3033}
         />
       </div>
-      <Section titleText="about me" className={styles.aboutMe}>
+      <Section titleText="about me." className={styles.aboutMe}>
         <div className={styles.aboutText}>
           <h3>
             I'm a Freelancer Front-end Developer with over 3 years of
@@ -63,7 +63,10 @@ export const AboutMe: React.FC = () => {
           </div>
           <div className={styles.interact}>
             <BtnBar text="Contact me" handleClick={() => {}} />
-            <BtnBar text="Portfolio" handleClick={() => {}} />
+            <BtnBar
+              text="Portfolio"
+              handleClick={() => handleClickAnchorLink("#portfolio")}
+            />
           </div>
         </div>
       </Section>

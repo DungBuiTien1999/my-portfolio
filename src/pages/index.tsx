@@ -4,6 +4,7 @@ import { HomeSection } from "@src/containers/Home";
 import { AboutSection } from "@src/containers/About";
 import { Services } from "@src/containers/Services";
 import { Portfolio } from "@src/containers/Portfolio";
+import { Blogs } from "@src/containers/Blogs";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <AboutSection />
         <Services />
         <Portfolio />
+        <Blogs />
       </div>
     </>
   );

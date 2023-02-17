@@ -14,3 +14,12 @@ export interface PortfolioItem {
   url: string;
   tags: string[];
 }
+
+export interface IBlog {
+  id: string;
+  image: string;
+  publish: string;
+  type: string;
+  numberComment: number;
+  title: string;
+}
