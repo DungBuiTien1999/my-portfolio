@@ -35,6 +35,16 @@ a {
   cursor: pointer;
 }
 
+input,
+textarea {
+  -webkit-appearance: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 * {
   box-sizing: border-box;
 }

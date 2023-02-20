@@ -13,7 +13,7 @@
   font-weight: 600;
   color: $white;
   line-height: 25px;
-  @include tablet {
+  @include notDesktop {
     display: block;
   }
   &.lightMode {
@@ -26,13 +26,6 @@
   width: 100%;
   @include flex-space();
 }
-
-// .logo {
-//   @include fz(25);
-//   font-weight: 600;
-//   color: $white;
-//   line-height: 25px;
-// }
 
 .togglerMenu {
   width: 40px;

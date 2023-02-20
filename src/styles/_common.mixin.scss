@@ -21,7 +21,43 @@
 }
 
 @mixin tablet {
-  @media only screen and (max-width: 968px) {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin notDesktop {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin msm {
+  @media only screen and (min-width: 360px) {
+    @content;
+  }
+}
+
+@mixin msp {
+  @media only screen and (min-width: 575px) {
+    @content;
+  }
+}
+
+@mixin msmallTablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mtablet {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mnotDesktop {
+  @media only screen and (min-width: 1200px) {
     @content;
   }
 }

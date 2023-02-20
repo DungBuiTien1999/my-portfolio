@@ -1,0 +1,127 @@
+.py100 {
+  padding: 100px 0;
+}
+
+.container {
+  display: flex;
+  margin: 0 -15px;
+  flex-wrap: wrap;
+  width: 100%;
+  @include tablet {
+    margin: 0;
+  }
+  .section1 {
+    width: 41.67%;
+    padding: 0 15px 15px;
+    margin-top: 15px;
+    flex-shrink: 0;
+    @include tablet {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .section2 {
+    flex-grow: 1;
+    padding: 0 15px 15px;
+    margin-top: 15px;
+    @include tablet {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.contactInfo {
+  background: $text-1;
+  padding: 30px;
+  color: $white;
+  &.lightMode {
+    background: $bg-gray;
+    color: $text-1;
+    .desc {
+      color: $text-2;
+    }
+  }
+  .title {
+    @include fz(28);
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 34px;
+  }
+  .desc {
+    @include fz(16);
+    line-height: 27px;
+    margin-bottom: 16px;
+  }
+  .infoDetails {
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    list-style: none;
+    .media {
+      position: relative;
+      padding-left: 40px;
+      i {
+        font-size: 22px;
+        color: $bg-green;
+        width: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &Body {
+        @include fz(18);
+        font-weight: 600;
+        line-height: 23px;
+      }
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.contactForm {
+  padding: 30px;
+  background: $text-1;
+  color: $white;
+  &.lightMode {
+    background: $bg-gray;
+    color: $text-1;
+  }
+  .title {
+    font-weight: 600;
+    @include fz(22);
+    margin-bottom: 20px;
+  }
+  .form {
+    .row {
+      width: 100%;
+      @include flex-space();
+      gap: 30px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.googleMap {
+  width: 100%;
+  margin-top: 50px;
+  .embedResponsive {
+    position: relative;
+    padding-bottom: 33%;
+    overflow: hidden;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    @include smallTablet {
+      padding-bottom: 55%;
+    }
+    iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+}

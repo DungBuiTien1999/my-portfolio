@@ -3,7 +3,13 @@
   margin: auto;
   min-height: 100vh;
   width: 100%;
-  @include tablet {
+  @include msp {
+    max-width: 540px;
+  }
+  @include msmallTablet {
     max-width: 720px;
+  }
+  @include mtablet {
+    max-width: 960px;
   }
 }

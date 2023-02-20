@@ -13,7 +13,7 @@
   z-index: $z-index-3x;
   cursor: pointer;
   transition: ease all 0.35s;
-  @include tablet {
+  @include notDesktop {
     top: 71px;
     right: 13px;
   }

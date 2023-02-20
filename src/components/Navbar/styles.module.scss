@@ -8,7 +8,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   @include flex-column-space();
-  @include tablet {
+  @include notDesktop {
     transition: ease all 0.35s;
     z-index: $z-index-x;
     left: -333px;

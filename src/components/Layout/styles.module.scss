@@ -12,7 +12,7 @@
   overflow-x: hidden;
   background-color: $bg-primary;
   transition: ease all 0.35s;
-  @include tablet {
+  @include notDesktop {
     padding: 0;
   }
   &.lightMode {
