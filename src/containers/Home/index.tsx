@@ -44,9 +44,9 @@ export const HomeSection: React.FC = () => {
             className={styles.lead}
           />
           <p className={cn(styles.desc, { [styles.lightMode]: isLightMode })}>
-            I design and develop services for customers of all sizes,
+            I analyze and develop services for customers of all sizes,
             specializing in creating stylish, modern websites, web services and
-            online stores.
+            financial company.
           </p>
           <BtnBar text="Download CV" handleClick={() => {}} />
         </div>

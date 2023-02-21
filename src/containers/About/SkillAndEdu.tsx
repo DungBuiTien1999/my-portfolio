@@ -13,38 +13,43 @@ type EduProps = {
 
 const educations = [
   {
-    year: "2010-2012",
-    skill: "Graphic Designer",
-    location: "International Design Institute",
+    year: "2020-2021",
+    skill: "Basic Blockchain",
+    location: "University of Science - VNUHCM",
   },
   {
-    year: "2010-2012",
+    year: "2019-2022",
     skill: "Web Development",
-    location: "International Design Institute",
+    location: "University of Science - VNUHCM",
   },
   {
-    year: "2010-2012",
-    skill: "Search Engine Optimization",
-    location: "International Design Institute",
+    year: "2019-2022",
+    skill: "Software Engineering",
+    location: "University of Science - VNUHCM",
+  },
+  {
+    year: "2017-2019",
+    skill: "Basic Coding",
+    location: "University of Science - VNUHCM",
   },
 ];
 
 const skills = [
   {
-    title: "HTML5",
-    process: 92,
+    title: "HTML/CSS",
+    process: 70,
   },
   {
-    title: "WordPress",
-    process: 72,
+    title: "ReactJS",
+    process: 85,
   },
   {
-    title: "Magento",
-    process: 86,
+    title: "NextJS",
+    process: 50,
   },
   {
-    title: "UI/UX",
-    process: 88,
+    title: "Logic",
+    process: 80,
   },
 ];
 
@@ -86,9 +91,10 @@ export const SkillAndEdu: React.FC = () => {
         <div className={styles.skills}>
           <h3>My skills</h3>
           <p>
-            I am a Freelancer Front-end Developer with over 3 years of
-            experience. I code and create web elements for amazing people around
-            the world. I like work with new people. New people new Experiences.
+            I am a Front-end Developer with over 2 years of experience with
+            ReactJS. I have experienced with Git, Typescript, NextJS, Redux
+            Toolkip, Redux Saga, SASS, Styles Component, CSS Library like Ant
+            Design, Bootstrap, Tailwindcss.
           </p>
           <div>
             {skills.map((skill, idx) => (

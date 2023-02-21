@@ -108,6 +108,7 @@
     }
     p {
       color: $text-2;
+      opacity: 1;
     }
     &:not(:first-child) {
       border-top: 1px solid rgba(11, 11, 19, 0.05);
@@ -136,11 +137,12 @@
   }
   h6 {
     @include fz(16);
-    font-weight: 500;
+    font-weight: 600;
     margin: 5px 0;
   }
   p {
     @include fz(15);
+    opacity: 0.8;
   }
 }
 

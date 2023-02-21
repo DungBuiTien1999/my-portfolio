@@ -15,7 +15,7 @@ export const AboutMe: React.FC = () => {
     >
       <div className={cn(styles.gallery, { [styles.lightMode]: isLightMode })}>
         <Image
-          src="/images/gallery.png"
+          src="/images/gallery_1.png"
           alt="hero"
           loader={exLoader as ImageLoader}
           layout="responsive"
@@ -25,19 +25,16 @@ export const AboutMe: React.FC = () => {
       </div>
       <Section titleText="about me." className={styles.aboutMe}>
         <div className={styles.aboutText}>
-          <h3>
-            I'm a Freelancer Front-end Developer with over 3 years of
-            experience.
-          </h3>
+          <h3>I'm a Front-end Developer with over 2 years of experience.</h3>
           <p className={cn(styles.desc, { [styles.lightMode]: isLightMode })}>
-            I'm a Freelancer Front-end Developer with over 3 years of
-            experience. I'm from San Francisco. I code and create web elements
-            for amazing people around the world. I like work with new people.
-            New people new Experiences.
+            I'm a Front-end Developer with over 2 years of experience with
+            ReactJS. I'm from Ho Chi Minh City. I code and create web elements
+            for amazing people around the world. I am passionate to explore new
+            Technology. I like work with new people. New people new Experiences.
           </p>
           <div className={styles.amountExs}>
             <div className={styles.Exps}>
-              <p className={styles.amount}>5k</p>
+              <p className={styles.amount}>10</p>
               <p
                 className={cn(styles.media, {
                   [styles.lightMode]: isLightMode,
@@ -62,7 +59,10 @@ export const AboutMe: React.FC = () => {
             </div>
           </div>
           <div className={styles.interact}>
-            <BtnBar text="Contact me" handleClick={() => {}} />
+            <BtnBar
+              text="Contact me"
+              handleClick={() => handleClickAnchorLink("#contact")}
+            />
             <BtnBar
               text="Portfolio"
               handleClick={() => handleClickAnchorLink("#portfolio")}
