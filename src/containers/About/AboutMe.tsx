@@ -15,12 +15,12 @@ export const AboutMe: React.FC = () => {
     >
       <div className={cn(styles.gallery, { [styles.lightMode]: isLightMode })}>
         <Image
-          src="/images/gallery_1.png"
+          src="/images/gallery.webp"
           alt="hero"
           loader={exLoader as ImageLoader}
           layout="responsive"
-          width={3072}
-          height={3033}
+          width={960}
+          height={681}
         />
       </div>
       <Section titleText="about me." className={styles.aboutMe}>

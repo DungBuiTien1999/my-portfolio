@@ -29,7 +29,7 @@ export default function Home() {
           property="og:description"
           content="My portfolio page, intruduce about myself"
         />
-        <meta property="og:image" content="/images/hero.jpg" />
+        <meta property="og:image" content="/images/hero.webp" />
         <meta property="og:url" content="https://example.com" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.png" />
