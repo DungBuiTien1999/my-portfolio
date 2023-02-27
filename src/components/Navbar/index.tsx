@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
         <div className={styles.logo}>
           <div className={styles.icon}>
             <Image
-              src="/images/avatar.png"
+              src="/images/avatar.webp"
               alt="avatar"
               loader={exLoader as ImageLoader}
               layout="responsive"

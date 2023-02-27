@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 const blogs: IBlog[] = [
   {
     id: "lWrHAvDEtWhs",
-    image: "/images/blogs/blog_1.jpg",
+    image: "/images/blogs/blog_1.webp",
     publish: "29/FEB/2022",
     type: "website",
     numberComment: 1,
@@ -21,7 +21,7 @@ const blogs: IBlog[] = [
   },
   {
     id: "dTITUnjvIOwu",
-    image: "/images/blogs/blog_2.jpg",
+    image: "/images/blogs/blog_2.webp",
     publish: "29/FEB/2022",
     type: "website",
     numberComment: 1,
@@ -30,7 +30,7 @@ const blogs: IBlog[] = [
   },
   {
     id: "gXtxOjkwUFpl",
-    image: "/images/blogs/blog_3.jpg",
+    image: "/images/blogs/blog_3.webp",
     publish: "29/FEB/2022",
     type: "website",
     numberComment: 1,
@@ -38,7 +38,7 @@ const blogs: IBlog[] = [
   },
   {
     id: "wNFFPFDkyUNu",
-    image: "/images/blogs/blog_4.jpg",
+    image: "/images/blogs/blog_4.webp",
     publish: "29/FEB/2022",
     type: "website",
     numberComment: 1,
@@ -46,7 +46,7 @@ const blogs: IBlog[] = [
   },
   {
     id: "wzERYkBfCgPw",
-    image: "/images/blogs/blog_5.jpg",
+    image: "/images/blogs/blog_5.webp",
     publish: "29/FEB/2022",
     type: "website",
     numberComment: 1,
@@ -55,7 +55,7 @@ const blogs: IBlog[] = [
   },
   {
     id: "tcAKwPIOljfH",
-    image: "/images/blogs/blog_6.jpg",
+    image: "/images/blogs/blog_6.webp",
     publish: "29/FEB/2022",
     type: "website",
     numberComment: 1,

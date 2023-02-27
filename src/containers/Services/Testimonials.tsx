@@ -21,31 +21,31 @@ type Props = {
 
 const testimonials: Props[] = [
   {
-    imageUrl: "/images/dog-1.jpeg",
+    imageUrl: "/images/testimonial_1.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     name: "Jennifer Lutheran",
     position: "CEO at pxdraft",
   },
   {
-    imageUrl: "/images/dog-2.jpeg",
+    imageUrl: "/images/testimonial_2.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     name: "Jennifer Lutheran",
     position: "CEO at pxdraft",
   },
   {
-    imageUrl: "/images/cat-1.jpeg",
+    imageUrl: "/images/testimonial_3.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     name: "Jennifer Lutheran",
     position: "CEO at pxdraft",
   },
   {
-    imageUrl: "/images/model-1.jpeg",
+    imageUrl: "/images/testimonial_4.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     name: "Jennifer Lutheran",
     position: "CEO at pxdraft",
   },
   {
-    imageUrl: "/images/model-2.jpeg",
+    imageUrl: "/images/testimonial_5.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     name: "Jennifer Lutheran",
     position: "CEO at pxdraft",

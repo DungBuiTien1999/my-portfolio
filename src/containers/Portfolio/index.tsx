@@ -20,51 +20,51 @@ const tabs: Tab[] = [
 
 const gallery: PortfolioItem[] = [
   {
-    url: "/images/portfolio/image_1.jpg",
+    url: "/images/portfolio/image_1.webp",
     tags: ["branding", "photoshop", "fashion"],
   },
   {
-    url: "/images/portfolio/image_2.jpg",
+    url: "/images/portfolio/image_2.webp",
     tags: ["branding", "photoshop", "product"],
   },
   {
-    url: "/images/portfolio/image_3.jpg",
+    url: "/images/portfolio/image_3.webp",
     tags: ["branding", "photoshop", "fashion", "product"],
   },
   {
-    url: "/images/portfolio/image_4.jpg",
+    url: "/images/portfolio/image_4.webp",
     tags: ["branding", "fashion", "product"],
   },
   {
-    url: "/images/portfolio/image_5.jpg",
+    url: "/images/portfolio/image_5.webp",
     tags: ["fashion", "product"],
   },
   {
-    url: "/images/portfolio/image_7.jpg",
+    url: "/images/portfolio/image_7.webp",
     tags: ["branding", "photoshop", "product"],
   },
   {
-    url: "/images/portfolio/image_8.jpg",
+    url: "/images/portfolio/image_8.webp",
     tags: ["photoshop", "fashion", "product"],
   },
   {
-    url: "/images/portfolio/image_12.jpg",
+    url: "/images/portfolio/image_12.webp",
     tags: ["branding", "photoshop"],
   },
   {
-    url: "/images/portfolio/image_13.jpg",
+    url: "/images/portfolio/image_13.webp",
     tags: ["photoshop", "fashion", "product"],
   },
   {
-    url: "/images/portfolio/image_14.jpg",
+    url: "/images/portfolio/image_14.webp",
     tags: ["photoshop", "fashion", "product"],
   },
   {
-    url: "/images/portfolio/image_15.jpg",
+    url: "/images/portfolio/image_15.webp",
     tags: ["branding", "photoshop", "fashion", "product"],
   },
   {
-    url: "/images/portfolio/image_17.jpg",
+    url: "/images/portfolio/image_17.webp",
     tags: ["fashion", "product"],
   },
 ];
