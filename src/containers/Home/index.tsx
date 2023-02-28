@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Image, { ImageLoader } from "next/image";
-import { exLoader } from "@src/common/utils";
+import { downloadFile, exLoader } from "@src/common/utils";
 import {
   useAppDispatch,
   useAppSelector,
@@ -48,7 +48,12 @@ export const HomeSection: React.FC = () => {
             specializing in creating stylish, modern websites, web services and
             financial company.
           </p>
-          <BtnBar text="Download CV" handleClick={() => {}} />
+          <BtnBar
+            text="Download CV"
+            handleClick={() => {
+              downloadFile("/buitiendung_cv.pdf");
+            }}
+          />
         </div>
         <div className={styles.hero}>
           <Image
