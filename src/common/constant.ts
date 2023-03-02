@@ -4,3 +4,7 @@ export const contactForm: { [key: string]: boolean } = {
   subject: true,
   message: true,
 };
+
+export const LOCAL_STORE_NAME = {
+  ISLIGHTMODE: "isLightMode",
+};

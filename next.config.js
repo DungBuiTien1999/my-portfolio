@@ -32,7 +32,7 @@ module.exports = withBundleAnalyzer({
     scrollRestoration: true,
     appDir: true,
   },
-  reactStrictMode: true,
+  reactStrictMode: false,
   trailingSlash: true,
   sassOptions: {
     prependData: `@import "@styles/base.module";@import '@styles/common.mixin';`,
