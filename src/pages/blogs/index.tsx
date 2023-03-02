@@ -1,7 +1,8 @@
+import { ComingSoon } from "@src/components/ComingSoon";
 import { NextPage } from "next";
 
 const BlogsPage: NextPage = () => {
-  return <h1 style={{ paddingTop: "100px" }}>comming soon</h1>;
+  return <ComingSoon />;
 };
 
 export default BlogsPage;

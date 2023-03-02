@@ -20,7 +20,11 @@ export const Header: React.FC = () => {
         <Link className={styles.logo} href="/">
           GBTDUN
         </Link>
-        <div onClick={handleClick} className={styles.togglerMenu}>
+        <div
+          id="hamberger"
+          onClick={handleClick}
+          className={styles.togglerMenu}
+        >
           <span></span>
           <span></span>
           <span></span>

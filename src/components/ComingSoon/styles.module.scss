@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  color: $bg-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include fz(50);
+  font-weight: 800;
+  &.lightMode {
+    color: $text-2;
+  }
+  h1 {
+    text-align: center;
+  }
+  @include sp {
+    @include fz(35);
+  }
+  .backBtn {
+    margin-top: 32px;
+    background-color: $bg-green;
+    color: $white;
+    border-radius: 16px;
+    text-align: center;
+    @include fz(18);
+    font-weight: 600;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+}

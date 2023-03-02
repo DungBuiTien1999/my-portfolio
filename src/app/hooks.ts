@@ -7,6 +7,7 @@ export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 import { RefObject, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 interface Args extends IntersectionObserverInit {
   freezeOnceVisible?: boolean;
@@ -53,4 +54,55 @@ export const useIntersectionObserver = (
   ]);
 
   return entry;
+};
+
+export const useOnClickOutside = (
+  ref: RefObject<HTMLElement>,
+  handler: () => void,
+  exceptedEle?: string
+) => {
+  useEffect(() => {
+    let isMoveScreen = false;
+    const listener = (event: MouseEvent | TouchEvent) => {
+      const getTag = event.target as HTMLElement;
+      if (
+        !ref ||
+        !ref.current ||
+        ref.current.contains(event.target as Node) ||
+        getTag.id === exceptedEle ||
+        isMoveScreen
+      ) {
+        return;
+      }
+      handler();
+    };
+    document.addEventListener("touchmove", () => (isMoveScreen = true));
+    document.addEventListener("touchstart", () => (isMoveScreen = false));
+    document.addEventListener("mousedown", (e) => listener(e));
+    document.addEventListener("touchend", (e) => listener(e));
+    return () => {
+      document.removeEventListener("mousedown", (e) => listener(e));
+      document.removeEventListener("touchend", (e) => listener(e));
+      document.addEventListener("touchmove", () => (isMoveScreen = false));
+      document.addEventListener("touchstart", () => (isMoveScreen = false));
+    };
+  }, [ref, handler, exceptedEle]);
+};
+
+interface IBACKBTN {
+  isShow: boolean;
+  handleBack(): void;
+}
+
+export const useShowBackBtn = (): IBACKBTN => {
+  const router = useRouter();
+  let isShow = false;
+  const handleBack = () => {
+    router.back();
+  };
+  if (router.pathname !== "/") {
+    isShow = true;
+    return { isShow, handleBack };
+  }
+  return { isShow, handleBack };
 };

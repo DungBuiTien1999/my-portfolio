@@ -4,7 +4,10 @@ import { exLoader, handleClickAnchorLink } from "@src/common/utils";
 import Link from "next/link";
 import { MenuItem } from "@src/types/common";
 import cn from "classnames";
-import { useAppSelector } from "@src/app/hooks";
+import { useAppSelector, useOnClickOutside } from "@src/app/hooks";
+import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { setShowNav } from "@src/features/common/commonSlice";
 
 const menu: MenuItem[] = [
   {
@@ -41,6 +44,17 @@ const menu: MenuItem[] = [
 
 export const Navbar: React.FC = () => {
   const { isShowNav, activeSection } = useAppSelector((state) => state.common);
+  const dispatch = useDispatch();
+  const navbarRef = useRef<HTMLElement>(null);
+  useOnClickOutside(
+    navbarRef,
+    () => {
+      if (isShowNav) {
+        dispatch(setShowNav(false));
+      }
+    },
+    "hamberger"
+  );
   const handleClick = (
     e:
       | React.MouseEvent<HTMLAnchorElement>
@@ -51,7 +65,10 @@ export const Navbar: React.FC = () => {
     handleClickAnchorLink(linkToCheck);
   };
   return (
-    <nav className={cn(styles.container, { [styles.show]: isShowNav })}>
+    <nav
+      ref={navbarRef}
+      className={cn(styles.container, { [styles.show]: isShowNav })}
+    >
       <div className={styles.navTop}>
         <div className={styles.logo}>
           <div className={styles.icon}>
