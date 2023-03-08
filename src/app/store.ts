@@ -1,9 +1,11 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import commonReducer from "@src/features/common/commonSlice";
+import noticeReducer from "@src/features/notice/noticeSlice";
 
 export const store = configureStore({
   reducer: {
     common: commonReducer,
+    notice: noticeReducer,
   },
 });
 

@@ -1,0 +1,48 @@
+.notice {
+  padding-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 200px;
+  .icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -65px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .content {
+    text-align: center;
+    margin-bottom: 40px;
+    .title {
+      @include fz(28);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .content {
+      color: $text-2;
+      @include fz(16);
+    }
+  }
+  &Btn {
+    width: 100%;
+    padding: 16px;
+    @include fz(18);
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    &.Success {
+      background: #39b54a;
+    }
+    &.Failure {
+      background: #df4f5f;
+    }
+  }
+}

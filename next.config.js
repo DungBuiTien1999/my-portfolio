@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const path = require("path");
 // const pathMap = require("./pathMap");
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 if (process.env.NEXT_APP_ENV) {
   require("dotenv").config({
@@ -46,6 +46,10 @@ module.exports = withBundleAnalyzer({
   generateBuildId: async () => {
     return new Date().toISOString();
   },
-  env: {},
-  serverRuntimeConfig: {}
+  env: {
+    emailServiceId: process.env.EMAIL_SERVICE_ID,
+    emailTemplateId: process.env.EMAIL_TEMPLATE_ID,
+    emailPublicKey: process.env.EMAIL_PUBLIC_KEY,
+  },
+  serverRuntimeConfig: {},
 });
