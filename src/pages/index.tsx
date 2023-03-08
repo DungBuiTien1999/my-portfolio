@@ -6,6 +6,8 @@ import { Services } from "@src/containers/Services";
 import { Portfolio } from "@src/containers/Portfolio";
 import { Blogs } from "@src/containers/Blogs";
 import { Contacts } from "@src/containers/Contacts";
+import { SuccessfulModal } from "@src/components/Modal/SuccessfulModal";
+import { FailureModal } from "@src/components/Modal/FailureModal";
 
 export default function Home() {
   return (
@@ -41,6 +43,8 @@ export default function Home() {
         <Portfolio />
         <Blogs />
         <Contacts />
+        <SuccessfulModal />
+        <FailureModal />
       </div>
     </>
   );

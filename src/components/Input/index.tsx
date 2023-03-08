@@ -12,6 +12,7 @@ type Props = {
   className?: string;
   isDisable?: boolean;
   checkRequire?: boolean;
+  isReset?: boolean;
   handleChange(value: string | number, name?: string): void;
 };
 
@@ -23,6 +24,7 @@ export const Input: React.FC<Props> = ({
   placeholder,
   className,
   isDisable,
+  isReset,
   handleChange,
 }) => {
   const [value, setValue] = useState("");
@@ -42,6 +44,10 @@ export const Input: React.FC<Props> = ({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [checkRequire, isRequire, value]);
+
+  useEffect(() => {
+    if (isReset) setValue("");
+  }, [isReset]);
 
   const handleOnChange = (e: FormEvent<HTMLInputElement>) => {
     const ipValue = e.currentTarget.value;
@@ -73,6 +79,7 @@ export const TextAreaInput: React.FC<Props> = ({
   placeholder,
   className,
   isDisable,
+  isReset,
   handleChange,
 }) => {
   const [value, setValue] = useState("");
@@ -87,6 +94,10 @@ export const TextAreaInput: React.FC<Props> = ({
       setIsErr(false);
     }
   }, [checkRequire, isRequire, value]);
+
+  useEffect(() => {
+    if (isReset) setValue("");
+  }, [isReset]);
 
   const handleOnChange = (e: FormEvent<HTMLTextAreaElement>) => {
     const ipValue = e.currentTarget.value;
