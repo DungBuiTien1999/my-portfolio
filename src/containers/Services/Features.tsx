@@ -11,34 +11,19 @@ type Props = {
 
 const features: Props[] = [
   {
-    icon: "fa-solid fa-mobile",
-    title: "Web Design",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
     icon: "fa-solid fa-tv",
     title: "Web Development",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    icon: "fa-solid fa-bullseye",
-    title: "SEO Marketing",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    desc: "I develop website application for mobile and PC with excellent UI, UX and performance.",
   },
   {
     icon: "fa-solid fa-tv",
-    title: "Web Design",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    icon: "fa-solid fa-mobile-screen-button",
-    title: "Apllication",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Responsive Development",
+    desc: "I handle responsive for website application for almost device like mobile (iOS and Android), tablet and computer.",
   },
   {
     icon: "fa-solid fa-bullseye",
-    title: "Web Design",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "SEO Website",
+    desc: "I make website application with excellent SEO. It has all the demand of google engine like title, meta tag, image link and sitemap.xml.",
   },
 ];
 

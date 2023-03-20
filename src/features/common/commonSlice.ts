@@ -23,8 +23,8 @@ export const commonSlice = createSlice({
     setShowNav: (state, action: PayloadAction<boolean>) => {
       state.isShowNav = action.payload;
     },
-    changeDarkMode: (state) => {
-      state.isLightMode = !state.isLightMode;
+    changeDarkMode: (state, action: PayloadAction<boolean>) => {
+      state.isLightMode = action.payload;
     },
     setActiveTab: (state, action: PayloadAction<string>) => {
       state.activeTab = action.payload;

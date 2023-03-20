@@ -11,7 +11,7 @@ export const Switchbackground: React.FC = () => {
   const handleClick = () => {
     if (isLightMode) localStorage.removeItem(LOCAL_STORE_NAME.ISLIGHTMODE);
     else localStorage.setItem(LOCAL_STORE_NAME.ISLIGHTMODE, "true");
-    dispatch(changeDarkMode());
+    dispatch(changeDarkMode(!isLightMode));
   };
   return (
     <div className={styles.container}>
