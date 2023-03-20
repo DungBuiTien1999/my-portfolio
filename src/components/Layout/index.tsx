@@ -14,7 +14,7 @@ export const Layout: React.FC<{ children: any }> = ({ children }) => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     if (localStorage.getItem(LOCAL_STORE_NAME.ISLIGHTMODE) && !isLightMode) {
-      dispatch(changeDarkMode());
+      dispatch(changeDarkMode(true));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

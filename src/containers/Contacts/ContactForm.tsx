@@ -65,6 +65,7 @@ export const ContactForm: React.FC = () => {
             form.current?.reset();
             handleReset();
             dispatch(setOpenSuccess(true));
+            setCheckValid(false);
           },
           (error) => {
             console.log("error", error.text);
@@ -72,6 +73,7 @@ export const ContactForm: React.FC = () => {
             form.current?.reset();
             handleReset();
             setOpenFailure(true);
+            setCheckValid(false);
           }
         );
     }
