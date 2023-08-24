@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
           <div className={styles.icon}>
             <Image
               src="/images/avatar.webp"
-              alt="avatar"
+              alt="avatar."
               loader={exLoader as ImageLoader}
               layout="responsive"
               width={1}
@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
               <div className={styles.icon}>
                 <Image
                   src={item.image}
-                  alt="home"
+                  alt="home."
                   loader={exLoader as ImageLoader}
                   layout="responsive"
                   width={1}

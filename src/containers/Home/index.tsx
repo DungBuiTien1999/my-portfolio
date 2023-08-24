@@ -58,7 +58,7 @@ export const HomeSection: React.FC = () => {
         <div className={styles.hero}>
           <Image
             src="/images/hero.webp"
-            alt="hero"
+            alt="hero."
             loader={exLoader as ImageLoader}
             layout="responsive"
             width={540}
