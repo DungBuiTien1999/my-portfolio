@@ -26,7 +26,7 @@ export const FailureModal: React.FC = () => {
         <div className={styles.icon}>
           <Image
             src="/images/ic_failure.png"
-            alt="successful"
+            alt="successful."
             loader={exLoader as ImageLoader}
             fill
           />

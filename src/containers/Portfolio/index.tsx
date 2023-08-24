@@ -98,7 +98,7 @@ export const Portfolio: React.FC = () => {
               <div key={`${idx}`} className={styles.gridItem}>
                 <Image
                   src={item.url}
-                  alt="portpolio"
+                  alt="portpolio."
                   loader={exLoader as ImageLoader}
                   layout="responsive"
                   width={100}

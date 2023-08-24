@@ -16,7 +16,7 @@ export const AboutMe: React.FC = () => {
       <div className={cn(styles.gallery, { [styles.lightMode]: isLightMode })}>
         <Image
           src="/images/gallery.webp"
-          alt="hero"
+          alt="hero."
           loader={exLoader as ImageLoader}
           layout="responsive"
           width={960}
