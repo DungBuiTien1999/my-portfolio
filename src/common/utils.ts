@@ -43,7 +43,7 @@ export const validateEmail = (email: string) => {
 export const downloadFile = (url: string) => {
   const link = document.createElement("a");
   link.href = url;
-  link.download = "buitiendung_cv.pdf";
+  link.download = "dungbui-FE-middle.pdf";
   link.dispatchEvent(new MouseEvent("click"));
   link.remove();
 };
