@@ -51,7 +51,7 @@ export const HomeSection: React.FC = () => {
           <BtnBar
             text="Download CV"
             handleClick={() => {
-              downloadFile("/buitiendung_cv.pdf");
+              downloadFile("/dungbui-FE-middle.pdf");
             }}
           />
         </div>
